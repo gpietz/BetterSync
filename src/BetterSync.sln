@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSync.Service", "BetterSync.Service\BetterSync.Service.csproj", "{1089E096-13DE-488A-887C-13B566F08BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSync.Common", "BetterSync.Common\BetterSync.Common.csproj", "{569CBED3-B6C9-42AA-BD7F-062BD56C42E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSync.Tests", "BetterSync.Tests\BetterSync.Tests.csproj", "{03527ED5-ADE9-4633-AF97-86ACFC059655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1089E096-13DE-488A-887C-13B566F08BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1089E096-13DE-488A-887C-13B566F08BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1089E096-13DE-488A-887C-13B566F08BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1089E096-13DE-488A-887C-13B566F08BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569CBED3-B6C9-42AA-BD7F-062BD56C42E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569CBED3-B6C9-42AA-BD7F-062BD56C42E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569CBED3-B6C9-42AA-BD7F-062BD56C42E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569CBED3-B6C9-42AA-BD7F-062BD56C42E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03527ED5-ADE9-4633-AF97-86ACFC059655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03527ED5-ADE9-4633-AF97-86ACFC059655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03527ED5-ADE9-4633-AF97-86ACFC059655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03527ED5-ADE9-4633-AF97-86ACFC059655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Rider
+.idea/
+*.sln.iml
+
+# Logs
+logs/
+
+# NLog
+NLog.config
+
+# Secrets
+secrets.json
+
+# Others
+.vscode/

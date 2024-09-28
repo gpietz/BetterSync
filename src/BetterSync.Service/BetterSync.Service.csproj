@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-BetterSync.Service-801ae31a-d81b-4af7-b5e4-dcc3e17506ad</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="LibGit2Sharp" Version="0.30.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0-rc.1.24431.7"/>
+        <PackageReference Include="System.ServiceProcess.ServiceController" Version="9.0.0-rc.1.24431.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BetterSync.Common\BetterSync.Common.csproj" />
+    </ItemGroup>
+</Project>

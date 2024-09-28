@@ -1,0 +1,35 @@
+{
+    "GlobalSettings": {
+        "LogLevel": "Debug",
+        "ReloadConfigEnabled": true
+    },
+    "DirectoriesToSync": [
+        {
+            "Source": "C:/Temp/BetterSync/TestDir1",
+            "Destination": "C:/Temp/BetterSync/TestTarget1",
+            "IncludeSubdirectories": true,
+            "SyncOnChange": true,
+            "SyncIntervalMinutes": 60,
+            "EnableGitIgnore": true
+        },
+        {
+            "Source": "C:/Temp/BetterSync/TestDir2",
+            "Destination": "C:/Temp/BetterSync/TestTarget2",
+            "FileMask": "*.txt",
+            "ExcludeMask": "*.temp"
+        }
+    ],
+    "FilesToSync": [
+        {
+            "Source": "C:/Temp/BetterSync/TestFiles/file1.txt",
+            "Destination": "C:/Temp/BetterSync/TestTargetFiles/",
+            "SyncOnChange": true,
+            "SyncDelay": 5
+        },
+        {
+            "Source": "C:/Temp/BetterSync/TestFiles/file2.txt",
+            "Destination": "C:/Temp/BetterSync/TestTargetFiles/file2.txt",
+            "SyncIntervalMinutes": 5
+        }
+    ]
+}
