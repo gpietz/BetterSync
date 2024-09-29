@@ -1,4 +1,5 @@
 ﻿using System.ServiceProcess;
+using BetterSync.Service.Core;
 
 namespace BetterSync.Service;
 
@@ -14,6 +15,7 @@ public sealed class SyncService : ServiceBase
     protected override void OnStart(string[] args)
     {
         _host = CreateHostBuilder(args).Build();
+        SetupServiceLocator(_host);
         _host.StartAsync();
     }
 
@@ -39,5 +41,15 @@ public sealed class SyncService : ServiceBase
             {
                 services.AddHostedService<Worker>();
             });
+    }
+    
+    private static void SetupServiceLocator(IHost? host)
+    {
+        if (host == null)
+            throw new InvalidOperationException("Application Host Context is null");
+    
+        var serviceLocator = (ServiceLocator) ServiceLocator.Instance;
+        serviceLocator.ResetLocatorProvider();
+        serviceLocator.SetLocatorProvider(host.Services);
     }
 }
