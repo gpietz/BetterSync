@@ -1,4 +1,5 @@
 ﻿using System.ServiceProcess;
+using BetterSync.Service.BackgroundServices;
 using BetterSync.Service.Core;
 
 namespace BetterSync.Service;
@@ -14,7 +15,11 @@ public sealed class SyncService : ServiceBase
 
     protected override void OnStart(string[] args)
     {
-        _host = CreateHostBuilder(args).Build();
+        _host = CreateHostBuilder(args).ConfigureServices((context, collection) =>
+        {
+            ServiceDistributor.Distribute(collection);
+        }).Build();
+       
         SetupServiceLocator(_host);
         _host.StartAsync();
     }
@@ -37,6 +42,7 @@ public sealed class SyncService : ServiceBase
     private static IHostBuilder CreateHostBuilder(string[] args)
     {
         return Host.CreateDefaultBuilder(args)
+            
             .ConfigureServices((hostContext, services) =>
             {
                 services.AddHostedService<Worker>();
